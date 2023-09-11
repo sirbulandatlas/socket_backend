@@ -1,0 +1,9 @@
+{
+  "jwtSecretKey": "secret",
+  "frontendUrl": "http://localhost:3000",
+ "host": "localhost",
+ "expiryRefreshToken": "7d",
+ "expiryAccessToken": "1d",
+ "port": 5000,
+ "databaseConnectionString": "postgres://postgres:123@localhost:5432/socket_app"
+}

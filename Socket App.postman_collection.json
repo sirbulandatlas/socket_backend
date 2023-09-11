@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "2748446a-5e53-4855-9568-d93da22cd642",
+		"name": "Socket App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18220564",
+		"_collection_link": "https://www.postman.com/speeding-capsule-639707/workspace/local/collection/18220564-2748446a-5e53-4855-9568-d93da22cd642?action=share&source=collection_link&creator=18220564"
+	},
+	"item": [
+		{
+			"name": "List Other users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0MUBtLmNvbSIsImlhdCI6MTY5NDQ1MDcyNywiZXhwIjoxNjk0NTM3MTI3fQ.4fF4NmC1ZteOx5llrSw0lvyQKUZD51qx_O5qGgFt2CA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/v1/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Start Dialogue",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJyZXBvNTRAZ21haWwuY29tIiwiaWF0IjoxNjkyMTgzMjk2LCJleHAiOjE2OTIyNjk2OTZ9.BLdZgrcy8VdAtgmoKAX68CmfIoiEwF-5Egu8g3_cWXg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"participants\": [3],\n    \"type\": \"one_to_one\",\n    \"title\": \"Random\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/users/new-conversation"
+			},
+			"response": []
+		},
+		{
+			"name": "Send a Message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJyZXBvNTRAZ21haWwuY29tIiwiaWF0IjoxNjkyMjEzMjU5LCJleHAiOjE2OTIyOTk2NTl9.eMBJ1pR0lnciQH1Wtr4aidwuJVWKAVaMplb1ABC4WB8"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"sadkfjasd\",\n  \"conversationId\": 1,\n  \"sendBy\": \"Junaid Sarfraz\",\n  \"senderId\": 3\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/users/conversations/send-message"
+			},
+			"response": []
+		},
+		{
+			"name": "All Dialogues",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0MUBtLmNvbSIsImlhdCI6MTY5NDQ1MDcyNywiZXhwIjoxNjk0NTM3MTI3fQ.4fF4NmC1ZteOx5llrSw0lvyQKUZD51qx_O5qGgFt2CA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/v1/users/conversations"
+			},
+			"response": []
+		},
+		{
+			"name": "Conversation Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0MUBtLmNvbSIsImlhdCI6MTY5NDQ1MDcyNywiZXhwIjoxNjk0NTM3MTI3fQ.4fF4NmC1ZteOx5llrSw0lvyQKUZD51qx_O5qGgFt2CA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/v1/users/conversations/1"
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"T3 three\",\n    \"email\": \"t3@m.com\",\n    \"password\": \"123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/sign-up"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"t1@m.com\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0MUBtLmNvbSIsImlhdCI6MTY5NDQ1MDcyNywiZXhwIjoxNjk0NTM3MTI3fQ.4fF4NmC1ZteOx5llrSw0lvyQKUZD51qx_O5qGgFt2CA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/v1/users/me"
+			},
+			"response": []
+		}
+	]
+}

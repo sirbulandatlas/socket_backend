@@ -1,0 +1,9 @@
+{
+  "host": "hostname",
+  "port": "PORT",
+  "jwtSecretKey": "secret",
+  "frontendUrl": "http://localhost:3000",
+  "expiryAccessToken": "expiry time",
+  "expiryRefreshToken": "expiry time",
+  "databaseConnectionString": "Connect string"
+}
